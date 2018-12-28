@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace ProjectManager.Business
 {
-    public class Application
+    public class Application : IApplication
     {
         private IRepository _repository;
 
