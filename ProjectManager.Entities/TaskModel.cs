@@ -6,9 +6,9 @@ namespace ProjectManager.Entities
     public class TaskModel
     {
         public int Task_ID { get; set; }
-        public int Project_ID { get; set; }
-        public int User_ID { get; set; }
-        public int Parent_ID { get; set; }
+        public int? Project_ID { get; set; }
+        public int? User_ID { get; set; }
+        public int? Parent_ID { get; set; }
         public int Priority { get; set; }
         public string Task { get; set; }
         public string StartDate { get; set; }

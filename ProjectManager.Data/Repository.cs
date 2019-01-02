@@ -115,20 +115,22 @@ namespace ProjectManager.Data
 
         public void AddTask(Task task, int? parentId = null, int? userId = null, int? projectId = null)
         {
-            if (userId.HasValue)
+            if (userId.HasValue && userId.Value > 0)
             {
                 var user = _entity.Users.FirstOrDefault(x => x.User_ID == userId.Value);
                 if (user != null)
                 {
                     task.Users.Add(user);
-                }
-                task.Project_ID = projectId;
-
-                if (parentId.HasValue && parentId.Value > 0)
-                {
-                    task.Parent_ID = parentId;
-                }
+                }                
             }
+
+            task.Project_ID = projectId;
+
+            if (parentId.HasValue && parentId.Value > 0)
+            {
+                task.Parent_ID = parentId;
+            }
+
             _entity.Tasks.Add(task);
             _entity.SaveChanges();
         }
@@ -141,13 +143,14 @@ namespace ProjectManager.Data
                 if (user != null)
                 {
                     task.Users.Add(user);
-                }
-
-                if (parentId.HasValue && parentId.Value > 0)
-                {
-                    task.Parent_ID = parentId;
-                }
+                }                
             }
+
+            if (parentId.HasValue && parentId.Value > 0)
+            {
+                task.Parent_ID = parentId;
+            }
+
             _entity.SaveChanges();
         }
 
