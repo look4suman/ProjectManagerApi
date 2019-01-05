@@ -24,8 +24,8 @@ namespace ProjectManagerApp.Test
         }
 
         [PerfBenchmark(Description = "Get All tasks.",
-        NumberOfIterations = 500, RunMode = RunMode.Throughput,
-        RunTimeMilliseconds = 1000, TestMode = TestMode.Measurement)]
+        NumberOfIterations = 5, RunMode = RunMode.Throughput,
+        RunTimeMilliseconds = 10, TestMode = TestMode.Measurement)]
         [CounterMeasurement("TestCounter")]
         [MemoryAssertion(MemoryMetric.TotalBytesAllocated, MustBe.LessThanOrEqualTo, ByteConstants.ThirtyTwoKb)]
         [GcTotalAssertion(GcMetric.TotalCollections, GcGeneration.Gen2, MustBe.ExactlyEqualTo, 0.0d)]
@@ -36,8 +36,8 @@ namespace ProjectManagerApp.Test
         }
 
         [PerfBenchmark(Description = "Get All Projects.",
-        NumberOfIterations = 500, RunMode = RunMode.Throughput,
-        RunTimeMilliseconds = 1000, TestMode = TestMode.Measurement)]
+        NumberOfIterations = 5, RunMode = RunMode.Throughput,
+        RunTimeMilliseconds = 10, TestMode = TestMode.Measurement)]
         [CounterMeasurement("TestCounter")]
         [MemoryAssertion(MemoryMetric.TotalBytesAllocated, MustBe.LessThanOrEqualTo, ByteConstants.ThirtyTwoKb)]
         [GcTotalAssertion(GcMetric.TotalCollections, GcGeneration.Gen2, MustBe.ExactlyEqualTo, 0.0d)]
@@ -48,8 +48,8 @@ namespace ProjectManagerApp.Test
         }
 
         [PerfBenchmark(Description = "Get All Users.",
-        NumberOfIterations = 500, RunMode = RunMode.Throughput,
-        RunTimeMilliseconds = 1000, TestMode = TestMode.Measurement)]
+        NumberOfIterations = 5, RunMode = RunMode.Throughput,
+        RunTimeMilliseconds = 10, TestMode = TestMode.Measurement)]
         [CounterMeasurement("TestCounter")]
         [MemoryAssertion(MemoryMetric.TotalBytesAllocated, MustBe.LessThanOrEqualTo, ByteConstants.ThirtyTwoKb)]
         [GcTotalAssertion(GcMetric.TotalCollections, GcGeneration.Gen2, MustBe.ExactlyEqualTo, 0.0d)]
@@ -60,8 +60,8 @@ namespace ProjectManagerApp.Test
         }
 
         [PerfBenchmark(Description = "Get specific task.",
-        NumberOfIterations = 500, RunMode = RunMode.Throughput,
-        RunTimeMilliseconds = 1000, TestMode = TestMode.Measurement)]
+        NumberOfIterations = 5, RunMode = RunMode.Throughput,
+        RunTimeMilliseconds = 10, TestMode = TestMode.Measurement)]
         [CounterMeasurement("TestCounter")]
         [MemoryAssertion(MemoryMetric.TotalBytesAllocated, MustBe.LessThanOrEqualTo, ByteConstants.ThirtyTwoKb)]
         [GcTotalAssertion(GcMetric.TotalCollections, GcGeneration.Gen2, MustBe.ExactlyEqualTo, 0.0d)]
@@ -72,8 +72,8 @@ namespace ProjectManagerApp.Test
         }
 
         [PerfBenchmark(Description = "Get specific user.",
-         NumberOfIterations = 500, RunMode = RunMode.Throughput,
-        RunTimeMilliseconds = 1000, TestMode = TestMode.Measurement)]
+         NumberOfIterations = 5, RunMode = RunMode.Throughput,
+        RunTimeMilliseconds = 10, TestMode = TestMode.Measurement)]
         [CounterMeasurement("TestCounter")]
         [MemoryAssertion(MemoryMetric.TotalBytesAllocated, MustBe.LessThanOrEqualTo, ByteConstants.ThirtyTwoKb)]
         [GcTotalAssertion(GcMetric.TotalCollections, GcGeneration.Gen2, MustBe.ExactlyEqualTo, 0.0d)]
